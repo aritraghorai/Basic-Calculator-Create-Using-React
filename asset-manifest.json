@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/aritraghorai/Basic-Calculator-Create-Using-React/static/css/main.108189ff.css",
+    "main.js": "/aritraghorai/Basic-Calculator-Create-Using-React/static/js/main.dd132a79.js",
+    "static/js/787.a56d0904.chunk.js": "/aritraghorai/Basic-Calculator-Create-Using-React/static/js/787.a56d0904.chunk.js",
+    "index.html": "/aritraghorai/Basic-Calculator-Create-Using-React/index.html",
+    "main.108189ff.css.map": "/aritraghorai/Basic-Calculator-Create-Using-React/static/css/main.108189ff.css.map",
+    "main.dd132a79.js.map": "/aritraghorai/Basic-Calculator-Create-Using-React/static/js/main.dd132a79.js.map",
+    "787.a56d0904.chunk.js.map": "/aritraghorai/Basic-Calculator-Create-Using-React/static/js/787.a56d0904.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.108189ff.css",
+    "static/js/main.dd132a79.js"
+  ]
+}
