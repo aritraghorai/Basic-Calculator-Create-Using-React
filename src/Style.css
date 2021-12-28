@@ -5,21 +5,20 @@
 }
 body {
   margin: 0;
-  background: linear-gradient(to right, #adc0ca, #c4d31a);
+  background: linear-gradient(to right, #dae0e4, #0bbd7387, #c8cdcf8e);
 }
 .heading {
   text-align: center;
-  color: rgba(6, 1, 1, 0.75);
+  color: rgb(4, 1, 1);
 }
-.con {
-  height: 100vh;
-}
+
 .calculator-grid {
   display: grid;
   margin-top: 2rem;
   grid-template-columns: repeat(4, 6rem);
-  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);
   justify-content: center;
+  overflow: hidden;
 }
 .span-two {
   grid-column: span 2;

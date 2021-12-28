@@ -126,7 +126,7 @@ function App() {
   return (
     <>
       <div className="con">
-        <h1 className="heading">Basic Calculator Build Using React</h1>
+        <h2 className="heading">Basic Calculator Build Using React</h2>
         <div className="calculator-grid">
           <div className="output">
             <div className="previous-operand">{formatOperant(previous_operand)} {operation}</div>
