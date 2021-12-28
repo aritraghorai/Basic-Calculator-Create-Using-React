@@ -13,9 +13,12 @@ export const ACTION = {
   EVALUATE: 'evaluate'
 }
 function reducer(state, { type, payload }) {
+  // console.log(state.current_operand);
   switch (type) {
     case ACTION.ADD_DIGIT:
       {
+        if (state.current_operand && state.current_operand.length === 15)
+          return state;
         if (state.overwrite) {
           return {
             ...state,
@@ -122,31 +125,33 @@ function App() {
   const [{ current_operand, previous_operand, operation }, dispatch] = useReducer(reducer, {})
   return (
     <>
-      <h1 className="heading">Basic Calculator Build Using React</h1>
-      <div className="calculator-grid">
-        <div className="output">
-          <div className="previous-operand">{formatOperant(previous_operand)} {operation}</div>
-          <div className="current-operand">{formatOperant(current_operand)}</div>
-        </div>
-        <button className="span-two" onClick={() => dispatch({ type: ACTION.CLEAR })}>AC</button>
-        <button onClick={() => dispatch({ type: ACTION.DELTTE_DIGIT })}>DEL</button>
-        <OperationButton operation="÷" dispatch={dispatch}></OperationButton>
-        <DigitButtton digit="1" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="2" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="3" dispatch={dispatch}></DigitButtton>
-        <OperationButton operation="*" dispatch={dispatch}></OperationButton>
-        <DigitButtton digit="4" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="5" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="6" dispatch={dispatch}></DigitButtton>
-        <OperationButton operation="+" dispatch={dispatch}></OperationButton>
-        <DigitButtton digit="7" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="8" dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="9" dispatch={dispatch}></DigitButtton>
-        <OperationButton operation="-" dispatch={dispatch}></OperationButton>
-        <DigitButtton digit="." dispatch={dispatch}></DigitButtton>
-        <DigitButtton digit="0" dispatch={dispatch}></DigitButtton>
-        <button className="span-two" onClick={() => dispatch({ type: ACTION.EVALUATE })}>=</button>
-      </div >
+      <div className="con">
+        <h1 className="heading">Basic Calculator Build Using React</h1>
+        <div className="calculator-grid">
+          <div className="output">
+            <div className="previous-operand">{formatOperant(previous_operand)} {operation}</div>
+            <div className="current-operand">{formatOperant(current_operand)}</div>
+          </div>
+          <button className="span-two" onClick={() => dispatch({ type: ACTION.CLEAR })}>AC</button>
+          <button onClick={() => dispatch({ type: ACTION.DELTTE_DIGIT })}>DEL</button>
+          <OperationButton operation="÷" dispatch={dispatch}></OperationButton>
+          <DigitButtton digit="1" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="2" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="3" dispatch={dispatch}></DigitButtton>
+          <OperationButton operation="*" dispatch={dispatch}></OperationButton>
+          <DigitButtton digit="4" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="5" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="6" dispatch={dispatch}></DigitButtton>
+          <OperationButton operation="+" dispatch={dispatch}></OperationButton>
+          <DigitButtton digit="7" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="8" dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="9" dispatch={dispatch}></DigitButtton>
+          <OperationButton operation="-" dispatch={dispatch}></OperationButton>
+          <DigitButtton digit="." dispatch={dispatch}></DigitButtton>
+          <DigitButtton digit="0" dispatch={dispatch}></DigitButtton>
+          <button className="span-two" onClick={() => dispatch({ type: ACTION.EVALUATE })}>=</button>
+        </div >
+      </div>
     </>
   )
 }

@@ -10,7 +10,9 @@ body {
 .heading {
   text-align: center;
   color: rgba(6, 1, 1, 0.75);
-  outline: 0.5 px solid rgb(0, 0, 0, 0.75);
+}
+.con {
+  height: 100vh;
 }
 .calculator-grid {
   display: grid;
